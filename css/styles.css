@@ -6,6 +6,7 @@ body, html {
   font: 1em/1.2em 'Roboto Slab', Helvetica, Arial, sans-serif;
   height: 100%;
   margin: 0;
+  min-width: 395px;
   padding: 0;
   width: 100%;
 }
@@ -59,12 +60,12 @@ header {
     font-size: 0;
     height: 40px;
     margin: 0 10px;
-    transition: border 0.3s;
+    transition: all 0.3s;
     width: 40px;
   }
 
     #social a:hover {
-      border-color: #000;
+      box-shadow: 0 0 0 1px #3d4650;
     }
 
     #twitter {
@@ -134,7 +135,7 @@ header {
     }
 
     .shot span {
-      background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.3);
       bottom: 0;
       color: #fff;
       left: 0;
@@ -145,7 +146,7 @@ header {
     }
 
       .shot:hover span {
-        padding-bottom: 20px;
+        padding: 15px 0;
       }
 
 footer {
