@@ -197,6 +197,7 @@ footer {
 
   #top {
     border: 0;
+    cursor: pointer;
     line-height: 0.3em;
     font-size: 0.8em;
   }
