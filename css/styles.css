@@ -68,12 +68,11 @@ header {
     background-position: -1px 0;
     border-radius: 100%;
     border: 2px solid #3d4650;
-    /*box-shadow: 0 0 0 2px #3d4650;*/
     display: inline-block;
     font-size: 0;
     height: 40px;
     margin: 0 10px;
-    transition: all 0.3s ;
+    transition: all 0.3s;
     width: 40px;
   }
 
