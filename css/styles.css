@@ -124,6 +124,7 @@ header {
 #about {
   background: rgba(255, 255, 255, 0.9);
   padding: 1em;
+  text-align: center;
 }
 
   #about p {
