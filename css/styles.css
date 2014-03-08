@@ -1,9 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:300,100);
 
-body, html {
+body,
+html {
   background: #fff;
-  font: 1em/1.2em 'Roboto Slab', Helvetica, Arial, sans-serif;
+  font: 1em/1.2em "Roboto Slab", Helvetica, Arial, sans-serif;
   height: 100%;
   margin: 0;
   min-width: 395px;
@@ -11,14 +12,16 @@ body, html {
   width: 100%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
 h1 {
   color: #3d4650;
-  font: 2em 'Roboto Condensed', sans-serif;
-  padding: 0.7em 0.5em 0.25em;
+  font: 2em "Roboto Condensed", sans-serif;
+  padding: .7em .5em .25em;
   text-transform: uppercase;
 }
 
@@ -38,14 +41,14 @@ h3 {
 h4 {
   color: #3d4650;
   font-weight: 300;
-  padding-bottom: 0.5em;
+  padding-bottom: .5em;
 }
 
 a {
   border-bottom: 1px dotted #777;
   color: #000;
   text-decoration: none;
-  transition: border 0.2s;
+  transition: border .2s;
 }
 
   a:hover {
@@ -72,7 +75,7 @@ header {
     font-size: 0;
     height: 40px;
     margin: 0 10px;
-    transition: all 0.3s;
+    transition: all .3s;
     width: 40px;
   }
 
@@ -82,32 +85,32 @@ header {
 
     #twitter {
       background: url(../img/twitter@2x.png) no-repeat;
-      animation: fadeInUp 0.25s;
-      -webkit-animation: fadeInUp 0.25s;
+      animation: fadeInUp .25s;
+      -webkit-animation: fadeInUp .25s;
     }
 
     #dribbble {
       background: url(../img/dribbble@2x.png) no-repeat;
-      animation: fadeInUp 0.35s;
-      -webkit-animation: fadeInUp 0.35s;
+      animation: fadeInUp .35s;
+      -webkit-animation: fadeInUp .35s;
     }
 
     #linkedin {
       background: url(../img/linkedin@2x.png) no-repeat;
-      animation: fadeInUp 0.47s;
-      -webkit-animation: fadeInUp 0.47s;
+      animation: fadeInUp .47s;
+      -webkit-animation: fadeInUp .47s;
     }
 
     #gplus {
       background: url(../img/gplus@2x.png) no-repeat;
-      animation: fadeInUp 0.6s;
-      -webkit-animation: fadeInUp 0.6s;
+      animation: fadeInUp .6s;
+      -webkit-animation: fadeInUp .6s;
     }
 
     #github {
       background: url(../img/github@2x.png) no-repeat;
-      animation: fadeInUp 0.65s;
-      -webkit-animation: fadeInUp 0.65s;
+      animation: fadeInUp .65s;
+      -webkit-animation: fadeInUp .65s;
     }
 
 #image {
@@ -122,7 +125,7 @@ header {
 }
 
 #about {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,.9);
   padding: 1em;
   text-align: center;
 }
@@ -140,7 +143,7 @@ header {
 
   #portfolio h3 {
     color: #fff;
-    padding-bottom: 0.5em;
+    padding-bottom: .5em;
   }
 
   #portfolio .container {
@@ -156,7 +159,7 @@ header {
     opacity: 0.7;
     overflow: hidden;
     position: relative;
-    transition: all 0.3s;
+    transition: all .3s;
     width: 100%;
   }
 
@@ -170,7 +173,7 @@ header {
     }
 
     .shot span {
-      background: rgba(0, 0, 0, 0.55);
+      background: rgba(0,0,0,.55);
       bottom: -3.5em;
       color: #fff;
       font-size: 0.8em;
@@ -204,7 +207,7 @@ footer {
   }
 
     #top::before {
-      content: '^';
+      content: "^";
       display: block;
     }
 
@@ -223,11 +226,23 @@ footer {
   }
 
 @keyframes fadeInUp {
-  0% { transform: translateY(30px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeInUp {
-  0% { -webkit-transform: translateY(30px); opacity: 0; }
-  100% { -webkit-transform: translateY(0); opacity: 1; }
+  0% {
+    -webkit-transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
 }
