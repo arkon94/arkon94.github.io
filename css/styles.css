@@ -23,13 +23,13 @@ h4 {
 }
 
 h1 {
-  font: 2.2em "Roboto Condensed", sans-serif;
+  font: 2.5em "Roboto Condensed", sans-serif;
   padding: 1.7em .5em .8em;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 400;
   padding-bottom: 2.9em;
   text-transform: uppercase;
@@ -129,12 +129,18 @@ header {
     color: #fff;
     display: inline-block;
     font-size: 0.825em;
-    margin: 0 15px;
     padding: 7px 0;
     position: relative;
     text-transform: uppercase;
     transition: all .1s ease-in-out;
-    width: 100px;
+    width: 110px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    #social a {
+      margin: 10px auto;
+      display: block;
+    }
   }
 
     #social a::before {
@@ -152,16 +158,16 @@ header {
     }
 
     #social a::before, #social a::after {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      height: 1px;
       background: #fff;
       content: '';
+      height: 1px;
+      left: 0;
       opacity: 0;
+      position: absolute;
       -webkit-transition: opacity .3s, -webkit-transform .3s;
       -moz-transition: opacity .3s, -moz-transform .3s;
       transition: opacity .3s, transform .3s;
+      width: 100%;
     }
 
     #social a:hover::before, #social a:hover::after {
@@ -265,7 +271,7 @@ footer {
     font-size: 0.95em;
     margin: 2em auto;
     padding: 1em;
-    width: 300px;
+    max-width: 300px;
   }
 
   #copyright {
