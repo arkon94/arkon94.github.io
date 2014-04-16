@@ -1,4 +1,6 @@
 arkon94.github.io
 =================
 
-Github-hosted portfolio site.
+My Github-hosted portfolio site.
+
+You can check it out live [here](www.echeung.me).
