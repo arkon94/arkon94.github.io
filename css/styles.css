@@ -38,24 +38,19 @@ h2 {
 h3 {
   font-size: 1.5em;
   font-weight: 400;
+  line-height: 1.5em;
   padding: 1em;
 }
 
-h5 {
-  font: 1em "Roboto Condensed", sans-serif;
-  text-transform: uppercase;
-  padding: 1.25em;
-}
-
 h4 {
-  color: #fff;
-  background: linear-gradient(#000,#bbb);
+  color: #444;
+  background: -webkit-linear-gradient(#000,#999);
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.75em;
   font-weight: 200;
-  line-height: 1.5em;
+  line-height: 1.3em;
   padding: 1em;
 }
 
@@ -70,6 +65,10 @@ a {
     border-color: #a4c4d4;
   }
 
+::selection {
+  background: #71BBD7;
+}
+
 .more {
   border-radius: 100%;
   cursor: pointer;
@@ -77,7 +76,8 @@ a {
   font-weight: 200;
   height: 30px;
   margin: 0 auto;
-  padding-top: 3px;
+  /*padding-top: 3px;*/
+  line-height: 1.5em;
   width: 30px;
 }
 
@@ -104,6 +104,16 @@ header {
   #header-container {
     display: table-cell;
     vertical-align: middle;
+  }
+
+  #header-titles {
+    -webkit-animation: shiftUp .5s ease-out;
+    animation: shiftUp .5s ease-out;
+  }
+
+  #header-social {
+    -webkit-animation: shiftDown .5s ease-out;
+    animation: shiftDown .5s ease-out;
   }
 
   #header-social a {
@@ -175,7 +185,7 @@ header {
 
 #about {
   background: rgba(255,255,255,.9);
-  padding: 1em;
+  padding: 1em 1em 3em 1em;
   text-align: center;
 }
 
@@ -276,24 +286,38 @@ footer {
     margin: 0;
   }
 
-@keyframes fadeInUp {
-  0% {
-    transform: translateY(30px);
-    opacity: 0;
+@keyframes shiftUp {
+  from {
+    transform: translateY(60px);
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  to {
+    transform: translateY(0px);
   }
 }
 
-@-webkit-keyframes fadeInUp {
-  0% {
-    -webkit-transform: translateY(30px);
-    opacity: 0;
+@-webkit-keyframes shiftUp {
+  from {
+    -webkit-transform: translateY(60px);
   }
-  100% {
-    -webkit-transform: translateY(0);
-    opacity: 1;
+  to {
+    -webkit-transform: translateY(0px);
+  }
+}
+
+@keyframes shiftDown {
+  from {
+    transform: translateY(-60px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes shiftDown {
+  from {
+    -webkit-transform: translateY(-60px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
   }
 }
