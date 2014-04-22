@@ -88,9 +88,7 @@ a {
 }
 
 header {
-  background: #c3c3c3 url(../img/hero.jpg) no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: #c3c3c3 url(../img/hero.jpg) no-repeat center center / cover;
   color: #fff;
   display: table;
   height: 100%;
