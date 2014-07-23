@@ -13,7 +13,7 @@
   </style>
 </head>
 <body>
-  <video width="256" height="256" id="live_video" autoplay>No video tag support.</video>
+  <video width="256" height="256" autoplay>No video tag support.</video>
   <canvas></canvas>
 
   <script>
@@ -33,25 +33,18 @@
         },
 
         function onSuccess(localMediaStream) {
-          // stream = localMediaStream;
-          // video = document.querySelector('video');
+          stream = localMediaStream;
+          video = document.querySelector('video');
 
-          // video.addEventListener('loadedmetadata',function onloadedmetadata() {
-          //   video.removeEventListener('loadedmetadata', onloadedmetadata, false);
-          //   video.play();
+          video.addEventListener('loadedmetadata',function onloadedmetadata() {
+            video.removeEventListener('loadedmetadata', onloadedmetadata, false);
+            video.play();
 
-          //   /* We can now use the video to initialize our canvas. */
-          //   initCanvas();
-          // }, false);
+            /* We can now use the video to initialize our canvas. */
+            initCanvas();
+          }, false);
 
-          // video.src = window.URL.createObjectURL(stream);
-
-          var video = document.querySelector('video');
-          video.src = window.URL.createObjectURL(localMediaStream);
-
-          video.play();
-
-          alert('Success');
+          video.src = window.URL.createObjectURL(stream);
         },
 
         function onFailure(err) {
@@ -65,60 +58,60 @@
       );
 
 
-      // /* These are made available in the global scope of the application. */
-      // var canvas, context, vx, vy, vw, vh, cx, cy, cw, ch;
+      /* These are made available in the global scope of the application. */
+      var canvas, context, vx, vy, vw, vh, cx, cy, cw, ch;
 
-      // // Previously Defined:
-      // // video
+      // Previously Defined:
+      // video
 
-      // function initCanvas() {
-      //   canvas = document.querySelector('canvas');
-      //   canvas.width = 256;
-      //   canvas.height = 256;
+      function initCanvas() {
+        canvas = document.querySelector('canvas');
+        canvas.width = 256;
+        canvas.height = 256;
 
-      //   context = canvas.getContext('2d');
+        context = canvas.getContext('2d');
 
-      //   vx = 0;
-      //   vy = 0;
-      //   vw = video.videoWidth;
-      //   vh = video.videoHeight;
-      //   cx = 0;
-      //   cy = 0;
-      //   cw = canvas.width;
-      //   ch = canvas.height;
-      // }
-
-
-      // /* These are made available in the global scope of the application. */
-      // var worker;
-
-      // function initWorkers() {
-      //   worker = new Worker('DecoderWorker.js');
-
-      //   worker.onmessage = function (message) {
-      //     if (message.data.success === true) {
-      //       /* Take action here. */
-      //     }
-
-      //     context.drawImage(video, vx, vy, vw, vh, cx, cy, cw, ch);
-      //   };
-      // }
+        vx = 0;
+        vy = 0;
+        vw = video.videoWidth;
+        vh = video.videoHeight;
+        cx = 0;
+        cy = 0;
+        cw = canvas.width;
+        ch = canvas.height;
+      }
 
 
-      // /* These are made available in the global scope of the application. */
-      // var scanningTimeout;
+      /* These are made available in the global scope of the application. */
+      var worker;
 
-      // // Previously Defined:
-      // // video, context, workers, vx, vy, vw, vh, cx, cy, cw, ch
+      function initWorkers() {
+        worker = new Worker('DecoderWorker.js');
 
-      // function startScanning(timeout) {
-      //   scanningTimeout = window.setTimeout(function () {
-      //     context.drawImage(video, vx, vy, vw, vh, cx, cy, cw, ch);
-      //     worker.postMessage(context.getImageData(0,0, cw, ch));
-      //   }, timeout || 0);
-      // }
+        worker.onmessage = function (message) {
+          if (message.data.success === true) {
+            /* Take action here. */
+          }
+
+          context.drawImage(video, vx, vy, vw, vh, cx, cy, cw, ch);
+        };
+      }
+
+
+      /* These are made available in the global scope of the application. */
+      var scanningTimeout;
+
+      // Previously Defined:
+      // video, context, workers, vx, vy, vw, vh, cx, cy, cw, ch
+
+      function startScanning(timeout) {
+        scanningTimeout = window.setTimeout(function () {
+          context.drawImage(video, vx, vy, vw, vh, cx, cy, cw, ch);
+          worker.postMessage(context.getImageData(0,0, cw, ch));
+        }, timeout || 0);
+      }
     } else {
-      alert('nope');
+      alert('No support for getUserMedia!');
     }
   </script>
 </body>
