@@ -5,15 +5,19 @@
   <title>HTML5 Barcode Scanner</title>
 
   <style>
+    video {
+      border: 1px solid red;
+      width: 300px;
+    }
+
     canvas {
-      border: 1px solid #000;
-      height: 256px;
-      width: 256px;
+      border: 1px solid green;
+      width: 300px;
     }
   </style>
 </head>
 <body>
-  <video width="256" height="256" autoplay>No video tag support.</video>
+  <video width="300" autoplay>No video tag support.</video>
   <canvas></canvas>
 
   <script>
@@ -66,19 +70,36 @@
 
       function initCanvas() {
         canvas = document.querySelector('canvas');
-        canvas.width = 256;
-        canvas.height = 256;
 
         context = canvas.getContext('2d');
 
+        video.addEventListener('loadeddata', findVideoSizeEvent);
+
         vx = 0;
         vy = 0;
-        vw = video.videoWidth;
-        vh = video.videoHeight;
         cx = 0;
         cy = 0;
-        cw = canvas.width;
-        ch = canvas.height;
+      }
+
+      function findVideoSizeEvent(event) { findVideoSize(); }
+
+      function findVideoSize() {
+        if (video.videoWidth > 0 && video.videoHeight > 0) {
+          video.removeEventListener('loadeddata', findVideoSize);
+
+          vw = video.videoWidth;
+          vh = video.videoHeight;
+
+          canvas.width = vw;
+          canvas.height = vh;
+
+          cw = canvas.width;
+          ch = canvas.height;
+
+          initWorkers();
+        } else {
+          setTimeout(findVideoSize, 200);
+        }
       }
 
 
@@ -88,9 +109,14 @@
       function initWorkers() {
         worker = new Worker('DecoderWorker.js');
 
-        worker.onmessage = function (message) {
+        startScanning(500);
+
+        worker.onmessage = function(message) {
           if (message.data.success === true) {
             /* Take action here. */
+            console.log('success');
+          } else {
+            console.log('failure');
           }
 
           context.drawImage(video, vx, vy, vw, vh, cx, cy, cw, ch);
@@ -101,13 +127,19 @@
       /* These are made available in the global scope of the application. */
       var scanningTimeout;
 
-      // Previously Defined:
-      // video, context, workers, vx, vy, vw, vh, cx, cy, cw, ch
-
       function startScanning(timeout) {
-        scanningTimeout = window.setTimeout(function () {
+        scanningTimeout = window.setInterval(function () {
           context.drawImage(video, vx, vy, vw, vh, cx, cy, cw, ch);
-          worker.postMessage(context.getImageData(0,0, cw, ch));
+          worker.postMessage(
+            {
+              ImageData: context.getImageData(0,0, cw, ch).data,
+              Width: cw,
+              Height: ch,
+              cmd: 'normal',
+              Decode: ['Code128'],
+              LowLight: true
+            }
+          );
         }, timeout || 0);
       }
     } else {
