@@ -24,14 +24,14 @@ h4 {
 
 h1 {
   font: 2.5em "Roboto Condensed", sans-serif;
-  padding: 1.7em .5em .8em;
+  padding: 1.7em .5em .65em;
   text-transform: uppercase;
 }
 
 h2 {
   font-size: 1.1em;
   font-weight: 400;
-  padding-bottom: 2.9em;
+  padding-bottom: 2.5em;
   text-transform: uppercase;
 }
 
@@ -66,7 +66,11 @@ a {
   }
 
 ::selection {
-  background: #71BBD7;
+  background: #71bbd7;
+}
+
+::-moz-selection {
+  background: #71bbd7;
 }
 
 .more {
@@ -76,7 +80,6 @@ a {
   font-weight: 200;
   height: 30px;
   margin: 0 auto;
-  /*padding-top: 3px;*/
   line-height: 1.5em;
   width: 30px;
 }
@@ -87,7 +90,7 @@ a {
   width: 80%;
 }
 
-header {
+#header {
   background: #c3c3c3 url(../img/hero.jpg) no-repeat center center / cover;
   color: #fff;
   display: table;
@@ -99,22 +102,22 @@ header {
   width: 100%;
 }
 
-  #header-container {
+  #header__container {
     display: table-cell;
     vertical-align: middle;
   }
 
-  #header-titles {
+  #header__container__titles {
     -webkit-animation: shiftUp .5s ease-out;
     animation: shiftUp .5s ease-out;
   }
 
-  #header-social {
+  #header__social {
     -webkit-animation: shiftDown .5s ease-out;
     animation: shiftDown .5s ease-out;
   }
 
-  #header-social a {
+  .header__social__link {
     border: 0;
     color: #fff;
     display: inline-block;
@@ -127,27 +130,28 @@ header {
   }
 
     @media only screen and (max-width: 650px) {
-      #header-social a {
+      .header__social__link {
         margin: 10px auto;
         display: block;
       }
     }
 
-    #header-social a::before {
+    .header__social__link::before {
       top: 0;
       -webkit-transform: translateY(-10px);
       -moz-transform: translateY(-10px);
       transform: translateY(-10px);
     }
 
-    #header-social a::after {
+    .header__social__link::after {
       bottom: 0;
       -webkit-transform: translateY(10px);
       -moz-transform: translateY(10px);
       transform: translateY(10px);
     }
 
-    #header-social a::before, #header-social a::after {
+    .header__social__link::before,
+    .header__social__link::after {
       background: #fff;
       content: '';
       height: 1px;
@@ -160,14 +164,15 @@ header {
       width: 100%;
     }
 
-    #header-social a:hover::before, #header-social a:hover::after {
+    .header__social__link:hover::before,
+    .header__social__link:hover::after {
       opacity: 1;
       -webkit-transform: translateY(0);
       -moz-transform: translateY(0);
       transform: translateY(0);
     }
 
-  #header-more {
+  #header__more {
     border: 1px solid #bccad3;
     bottom: 1.5em;
     color: #bccad3;
@@ -176,13 +181,13 @@ header {
     position: absolute;
   }
 
-    #header-more:hover {
+    #header__more:hover {
       border-color: #fff;
       color: #fff;
     }
 
-.error header {
-  background-image: none !important;
+.error #header {
+  background: #2d393d !important;
 }
 
 #about {
@@ -213,7 +218,7 @@ header {
     padding: 1.5em 0;
   }
 
-  .shot {
+  .portfolio__shot {
     border: 0;
     display: inline-block;
     height: auto;
@@ -226,16 +231,16 @@ header {
     width: 100%;
   }
 
-    .shot:hover {
+    .portfolio__shot:hover {
       opacity: 1;
     }
 
-    .shot img {
+    .portfolio__shot img {
       height: auto;
       width: 100%;
     }
 
-    .shot span {
+    .portfolio__shot span {
       background: rgba(0,0,0,.6);
       bottom: -4.5em;
       color: #fff;
@@ -247,37 +252,37 @@ header {
       width: 100%;
     }
 
-      .shot span p:nth-child(2) {
+      .portfolio__shot span p:nth-child(2) {
         font-size: 0.9em;
       }
 
-      .shot:hover span {
+      .portfolio__shot:hover span {
         bottom: 3px;
       }
 
-footer {
+#footer {
   background: #2d393d;
   color: #fff;
   padding: 2em 1em;
   text-align: center;
 }
 
-  footer a {
+  #footer a {
     color: #fff;
   }
 
-  #footer-top {
+  #footer__top {
     border: 1px solid #737b7d;
     color: #737b7d;
     cursor: pointer;
   }
 
-    #footer-top:hover {
+    #footer__top:hover {
       border-color: #fff;
       color: #fff;
     }
 
-  #footer-contact {
+  #footer__contact {
     background: #3f4f54;
     border-radius: 2em;
     font-size: 0.95em;
@@ -286,7 +291,7 @@ footer {
     max-width: 300px;
   }
 
-  #footer-copyright {
+  #footer__copyright {
     color: #737b7d;
     font-size: 0.8em;
     margin: 0;
