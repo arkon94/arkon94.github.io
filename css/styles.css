@@ -195,6 +195,12 @@ a {
       color: #fff;
     }
 
+    @media only screen and (max-height: 500px) {
+      #header__more {
+        display: none;
+      }
+    }
+
 .error #header {
   background: #2d393d !important;
 }
