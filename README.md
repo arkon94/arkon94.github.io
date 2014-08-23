@@ -1,4 +1,4 @@
-arkon94.github.io
+arkon.github.io
 =================
 
 My Github-hosted portfolio site.
