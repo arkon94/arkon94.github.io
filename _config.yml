@@ -1,11 +1,11 @@
 # Site settings
 title: Eugene Cheung | Developer + Designer
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+email: ey.cheung@outlook.com
+description: "A passionate developer with an eye for beautiful creations."
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://echeung.me"
+twitter_username: arkon
+github_username:  arkon
 
 # Build settings
 markdown: kramdown
