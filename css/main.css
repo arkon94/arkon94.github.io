@@ -112,16 +112,16 @@ a {
 
   #header__container__titles {
     opacity: 0;
-    -webkit-animation: shiftUp .5s ease-out forward;
-       -moz-animation: shiftUp .5s ease-out forward;
-            animation: shiftUp .5s ease-out forward;
+    -webkit-animation: shiftUp .5s ease-out forwards;
+       -moz-animation: shiftUp .5s ease-out forwards;
+            animation: shiftUp .5s ease-out forwards;
   }
 
   #header__social {
     opacity: 0;
-    -webkit-animation: shiftDown .5s ease-out forward;
-       -moz-animation: shiftDown .5s ease-out forward;
-            animation: shiftDown .5s ease-out forward;
+    -webkit-animation: shiftDown .5s ease-out forwards;
+       -moz-animation: shiftDown .5s ease-out forwards;
+            animation: shiftDown .5s ease-out forwards;
   }
 
   .header__social__link {
@@ -189,9 +189,9 @@ a {
     margin-left: -15px;
     position: absolute;
     opacity: 0;
-    -webkit-animation: shiftDown .5s ease .5s forward;
-       -moz-animation: shiftDown .5s ease .5s forward;
-            animation: shiftDown .5s ease .5s forward;
+    -webkit-animation: shiftDown .5s ease .5s forwards;
+       -moz-animation: shiftDown .5s ease .5s forwards;
+            animation: shiftDown .5s ease .5s forwards;
   }
 
     #header__more:hover {
