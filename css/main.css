@@ -111,15 +111,17 @@ a {
   }
 
   #header__container__titles {
-    -webkit-animation: shiftUp .5s ease-out;
-       -moz-animation: shiftUp .5s ease-out;
-            animation: shiftUp .5s ease-out;
+    opacity: 0;
+    -webkit-animation: shiftUp .5s ease-out forward;
+       -moz-animation: shiftUp .5s ease-out forward;
+            animation: shiftUp .5s ease-out forward;
   }
 
   #header__social {
-    -webkit-animation: shiftDown .5s ease-out;
-       -moz-animation: shiftDown .5s ease-out;
-            animation: shiftDown .5s ease-out;
+    opacity: 0;
+    -webkit-animation: shiftDown .5s ease-out forward;
+       -moz-animation: shiftDown .5s ease-out forward;
+            animation: shiftDown .5s ease-out forward;
   }
 
   .header__social__link {
@@ -186,9 +188,10 @@ a {
     left: 50%;
     margin-left: -15px;
     position: absolute;
-    -webkit-animation: shiftDown .5s ease .5s;
-       -moz-animation: shiftDown .5s ease .5s;
-            animation: shiftDown .5s ease .5s;
+    opacity: 0;
+    -webkit-animation: shiftDown .5s ease .5s forward;
+       -moz-animation: shiftDown .5s ease .5s forward;
+            animation: shiftDown .5s ease .5s forward;
   }
 
     #header__more:hover {
