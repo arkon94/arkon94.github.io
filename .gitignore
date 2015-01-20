@@ -10,3 +10,8 @@ Thumbs.db
 
 # Jekyll stuff
 _site
+.sass_cache/
+
+# Bundler
+/.bundle/
+/vendor/
