@@ -1,78 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+@charset "utf-8";
+@import "core";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body,
-html {
-  background: #fff;
-  font: 1em/1.2em Raleway, Helvetica, Arial, sans-serif;
-  height: 100%;
-  width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  text-align: center;
-}
-
-h1 {
-  font: 2.5em "Roboto Condensed", sans-serif;
-  padding-bottom: .65em;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 1.1em;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: 1.5em;
-  font-weight: 400;
-  line-height: 1.5em;
-  padding: 1em;
-}
-
-h4 {
-  background: -webkit-linear-gradient(#000, #999);
-  background-size: cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #444;
-  font-size: 2.75em;
-  font-weight: 200;
-  line-height: 1.3em;
-  padding: 1em;
-}
-
-a {
-  border-bottom: 1px dotted #777;
-  color: #000;
-  text-decoration: none;
-  -webkit-transition: all .2s;
-     -moz-transition: all .2s;
-          transition: all .2s;
-
-  &:hover {
-    border-color: #a4c4d4;
-  }
-}
-
-::selection {
-  background: #71bbd7;
-}
-
-::-moz-selection {
-  background: #71bbd7;
-}
+// Header
 
 .more {
   border-radius: 100%;
@@ -111,21 +41,21 @@ a {
   }
 
   #header__container__titles {
+    animation: shiftUp .5s ease-out forwards;
     border: 2px solid #fff;
     margin: 0 auto 2.5em;
     max-width: 350px;
-    padding: 1.75em .5em;
+    padding: 1.75em 1em;
     opacity: 0;
-    -webkit-animation: shiftUp .5s ease-out forwards;
-       -moz-animation: shiftUp .5s ease-out forwards;
-            animation: shiftUp .5s ease-out forwards;
   }
 
+    #header__container__titles--name {
+      padding-bottom: .65em;
+    }
+
   #header__social {
+    animation: shiftDown .5s ease-out forwards;
     opacity: 0;
-    -webkit-animation: shiftDown .5s ease-out forwards;
-       -moz-animation: shiftDown .5s ease-out forwards;
-            animation: shiftDown .5s ease-out forwards;
   }
 
   .header__social__link {
@@ -136,23 +66,17 @@ a {
     padding: 7px 0;
     position: relative;
     text-transform: uppercase;
-    -webkit-transition: all .15s ease-in-out;
-       -moz-transition: all .15s ease-in-out;
-            transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
     width: 110px;
 
     &::before {
       top: 0;
-      -webkit-transform: translateY(-10px);
-         -moz-transform: translateY(-10px);
-              transform: translateY(-10px);
+      transform: translateY(-10px);
     }
 
     &::after {
       bottom: 0;
-      -webkit-transform: translateY(10px);
-         -moz-transform: translateY(10px);
-              transform: translateY(10px);
+      transform: translateY(10px);
     }
 
     &::before,
@@ -163,18 +87,14 @@ a {
       left: 0;
       opacity: 0;
       position: absolute;
-      -webkit-transition: opacity .3s, -webkit-transform .3s;
-         -moz-transition: opacity .3s, -moz-transform .3s;
-              transition: opacity .3s, transform .3s;
+      transition: opacity .3s, transform .3s;
       width: 100%;
     }
 
     &:hover::before,
     &:hover::after {
       opacity: 1;
-      -webkit-transform: translateY(0);
-         -moz-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateY(0);
     }
   }
 
@@ -193,9 +113,7 @@ a {
     margin-left: -15px;
     position: absolute;
     opacity: 0;
-    -webkit-animation: shiftDown .5s ease .5s forwards;
-       -moz-animation: shiftDown .5s ease .5s forwards;
-            animation: shiftDown .5s ease .5s forwards;
+    animation: shiftDown .5s ease .5s forwards;
 
     &:hover {
       border-color: #fff;
@@ -211,6 +129,18 @@ a {
 
 .error #header {
   background: #2d393d !important;
+}
+
+
+// Home page content
+
+h4 {
+  background: -webkit-linear-gradient(#000, #999);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #444;
+  padding: 1em;
 }
 
 #about {
@@ -231,15 +161,15 @@ a {
   padding: 1em;
   text-align: center;
 
-  h3 {
-    color: #fff;
-    padding-bottom: .5em;
-  }
-
   .container {
     padding: 1.5em 0;
   }
 }
+
+  #portfolio__header {
+    color: #fff;
+    padding: 1em 1em .5em;
+  }
 
   .portfolio__shot {
     border: 0;
@@ -250,9 +180,7 @@ a {
     opacity: 0.7;
     overflow: hidden;
     position: relative;
-    -webkit-transition: all .3s;
-       -moz-transition: all .3s;
-            transition: all .3s;
+    transition: all .3s;
     width: 100%;
 
     &:hover {
@@ -276,9 +204,7 @@ a {
       left: 0;
       padding: 10px 0;
       position: absolute;
-      -webkit-transition: all .15s ease-in;
-         -moz-transition: all .15s ease-in;
-              transition: all .15s ease-in;
+      transition: all .15s ease-in;
       width: 100%;
 
       p:nth-child(2) {
@@ -323,33 +249,3 @@ a {
     font-size: 0.8em;
     margin: 0;
   }
-
-@keyframes shiftUp {
-  0%   { opacity: 0; transform: translateY(60px); }
-  100% { opacity: 1; transform: translateY(0px); }
-}
-
-@-moz-keyframes shiftUp {
-  0%   { opacity: 0; -moz-transform: translateY(60px); }
-  100% { opacity: 1; -moz-transform: translateY(0px); }
-}
-
-@-webkit-keyframes shiftUp {
-  0%   { opacity: 0; -webkit-transform: translateY(60px); }
-  100% { opacity: 1; -webkit-transform: translateY(0px); }
-}
-
-@keyframes shiftDown {
-  0%   { opacity: 0; transform: translateY(-60px); }
-  100% { opacity: 1; transform: translateY(0px); }
-}
-
-@-moz-keyframes shiftDown {
-  0%   { opacity: 0; -moz-transform: translateY(-60px); }
-  100% { opacity: 1; -moz-transform: translateY(0px); }
-}
-
-@-webkit-keyframes shiftDown {
-  0%   { opacity: 0; -webkit-transform: translateY(-60px); }
-  100% { opacity: 1; -webkit-transform: translateY(0px); }
-}

@@ -5,9 +5,10 @@ layout: home
 <header id="header">
   <div id="header__container">
     <div id="header__container__titles">
-      <h1>Eugene Cheung</h1>
-      <h2>Developer + Designer</h2>
+      <h1 id="header__container__titles--name">Eugene Cheung</h1>
+      <h2 id="header__container__titles--description">Developer + Designer</h2>
     </div>
+
     <section id="header__social">
       <a class="header__social__link" href="https://www.twitter.com/arkon" title="@arkon on Twitter">
         Twitter
@@ -23,8 +24,10 @@ layout: home
       </a>
     </section>
   </div>
+
   <a class="more" id="header__more" title="Learn more">↓</a>
 </header>
+
 <section id="about">
   <h4>Hi, I like creating things.</h4>
   <div class="container">
@@ -34,8 +37,10 @@ layout: home
     <p>Interested in working with me? Get in touch through <a href="https://www.twitter.com/arkon">Twitter</a> or <a href="mailto:ey.cheung@outlook.com">email</a>.
   </div>
 </section>
+
 <section id="portfolio">
-  <h3>Some things I've made</h3>
+  <h3 id="portfolio__header">Some things I've made</h3>
+
   <div class="container">
     {% for entry in site.data.portfolio %}
       <a class="portfolio__shot" href="{{ entry.url }}">

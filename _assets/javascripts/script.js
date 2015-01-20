@@ -5,5 +5,5 @@ var scrollTo = function(el, off){
   }, 650);
 }
 
-$("#header__more").click(function(){ scrollTo("#about", 0); });
-$("#footer__top").click(function(){ scrollTo("body", 0); });
+$("#header__more").click(function() { scrollTo("#about", 0); });
+$("#footer__top").click(function() { scrollTo("body", 0); });
