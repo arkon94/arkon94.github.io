@@ -24,14 +24,13 @@ h4 {
 
 h1 {
   font: 2.5em "Roboto Condensed", sans-serif;
-  padding: 1.7em .5em .65em;
+  padding-bottom: .65em;
   text-transform: uppercase;
 }
 
 h2 {
   font-size: 1.1em;
   font-weight: 400;
-  padding-bottom: 2.5em;
   text-transform: uppercase;
 }
 
@@ -43,7 +42,7 @@ h3 {
 }
 
 h4 {
-  background: -webkit-linear-gradient(#000,#999);
+  background: -webkit-linear-gradient(#000, #999);
   background-size: cover;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,11 +60,11 @@ a {
   -webkit-transition: all .2s;
      -moz-transition: all .2s;
           transition: all .2s;
-}
 
-  a:hover {
+  &:hover {
     border-color: #a4c4d4;
   }
+}
 
 ::selection {
   background: #71bbd7;
@@ -93,7 +92,8 @@ a {
 }
 
 #header {
-  background: #96b5c9 url(../img/hero.jpg) no-repeat center center / cover;
+  background: #96b5c9 image-url('hero.jpg') no-repeat center center / cover;
+  background-attachment: fixed;
   color: #fff;
   display: table;
   height: 100%;
@@ -111,6 +111,10 @@ a {
   }
 
   #header__container__titles {
+    border: 2px solid #fff;
+    margin: 0 auto 2.5em;
+    max-width: 350px;
+    padding: 1.75em .5em;
     opacity: 0;
     -webkit-animation: shiftUp .5s ease-out forwards;
        -moz-animation: shiftUp .5s ease-out forwards;
@@ -136,31 +140,23 @@ a {
        -moz-transition: all .15s ease-in-out;
             transition: all .15s ease-in-out;
     width: 110px;
-  }
 
-    @media only screen and (max-width: 650px) {
-      .header__social__link {
-        margin: 10px auto;
-        display: block;
-      }
-    }
-
-    .header__social__link::before {
+    &::before {
       top: 0;
       -webkit-transform: translateY(-10px);
          -moz-transform: translateY(-10px);
               transform: translateY(-10px);
     }
 
-    .header__social__link::after {
+    &::after {
       bottom: 0;
       -webkit-transform: translateY(10px);
          -moz-transform: translateY(10px);
               transform: translateY(10px);
     }
 
-    .header__social__link::before,
-    .header__social__link::after {
+    &::before,
+    &::after {
       background: #fff;
       content: '';
       height: 1px;
@@ -173,12 +169,20 @@ a {
       width: 100%;
     }
 
-    .header__social__link:hover::before,
-    .header__social__link:hover::after {
+    &:hover::before,
+    &:hover::after {
       opacity: 1;
       -webkit-transform: translateY(0);
          -moz-transform: translateY(0);
               transform: translateY(0);
+    }
+  }
+
+    @media only screen and (max-width: 650px) {
+      .header__social__link {
+        margin: 10px auto;
+        display: block;
+      }
     }
 
   #header__more {
@@ -192,12 +196,12 @@ a {
     -webkit-animation: shiftDown .5s ease .5s forwards;
        -moz-animation: shiftDown .5s ease .5s forwards;
             animation: shiftDown .5s ease .5s forwards;
-  }
 
-    #header__more:hover {
+    &:hover {
       border-color: #fff;
       color: #fff;
     }
+  }
 
     @media only screen and (max-height: 500px) {
       #header__more {
@@ -213,29 +217,29 @@ a {
   background: rgba(255,255,255,.9);
   padding: 1em 1em 3em 1em;
   text-align: center;
-}
 
-  #about p {
+  p {
     color: #233843;
     font-size: 1.1em;
     line-height: 1.9em;
     margin-bottom: 1em;
   }
+}
 
 #portfolio {
   background: #a4c4d4;
   padding: 1em;
   text-align: center;
-}
 
-  #portfolio h3 {
+  h3 {
     color: #fff;
     padding-bottom: .5em;
   }
 
-  #portfolio .container {
+  .container {
     padding: 1.5em 0;
   }
+}
 
   .portfolio__shot {
     border: 0;
@@ -250,18 +254,21 @@ a {
        -moz-transition: all .3s;
             transition: all .3s;
     width: 100%;
-  }
 
-    .portfolio__shot:hover {
+    &:hover {
       opacity: 1;
+
+      span {
+        bottom: 3px;
+      }
     }
 
-    .portfolio__shot img {
+    img {
       height: auto;
       width: 100%;
     }
 
-    .portfolio__shot span {
+    span {
       background: rgba(0,0,0,.6);
       bottom: -4.5em;
       color: #fff;
@@ -273,37 +280,34 @@ a {
          -moz-transition: all .15s ease-in;
               transition: all .15s ease-in;
       width: 100%;
-    }
 
-      .portfolio__shot span p:nth-child(2) {
+      p:nth-child(2) {
         font-size: 0.9em;
       }
-
-      .portfolio__shot:hover span {
-        bottom: 3px;
-      }
+    }
+  }
 
 #footer {
   background: #2d393d;
   color: #fff;
   padding: 2em 1em;
   text-align: center;
-}
 
-  #footer a {
+  a {
     color: #fff;
   }
+}
 
   #footer__top {
     border: 1px solid #737b7d;
     color: #737b7d;
     cursor: pointer;
-  }
 
-    #footer__top:hover {
+    &:hover {
       border-color: #fff;
       color: #fff;
     }
+  }
 
   #footer__contact {
     background: #3f4f54;

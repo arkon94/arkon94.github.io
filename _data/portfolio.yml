@@ -1,0 +1,65 @@
+- title:       Sherlocke
+  short_title: Sherlocke
+  description: Design + development
+  url:         https://sherlocke.me/
+  pic:         sherlocke
+
+- title:       The MarkUs Project
+  short_title: MarkUs
+  description: Rebranding + web design/dev
+  url:         http://markusproject.org/
+  pic:         markus
+
+- title:       University of Toronto Computer Science Student Union
+  short_title: CSSU
+  description: Rebranding + web design/dev
+  url:         https://cssu.ca/
+  pic:         cssu
+
+- title:       CDF Labs Android app
+  short_title: CDF Labs
+  description: Android app development
+  url:         https://play.google.com/store/apps/details?id=me.echeung.cdflabs
+  pic:         cdf
+
+- title:       txti
+  short_title: txti
+  description: Website design + development
+  url:         http://txti.unhaltable.com/
+  pic:         txti
+
+- title:       Ultraviolet
+  short_title: Ultraviolet
+  description: Chrome app design + development
+  url:         http://ultraviolet.unhaltable.com/
+  pic:         uv
+
+- title:       Cryptr
+  short_title: Cryptr
+  description: Chrome app design + development
+  url:         http://cryptr.unhaltable.com/
+  pic:         cryptr
+
+- title:       Jon &amp; Nick
+  short_title: Vote for Jon &amp; Nick
+  description: Website design + development
+  url:         http://echeung.me/jonandnick/
+  pic:         jonnick
+
+- title:       ReTwit for Twitter
+  short_title: ReTwit for Twitter
+  description: Chrome extension design + development
+  url:         https://chrome.google.com/webstore/detail/retwit-for-twitter/bkpjdbhepoejcinkccodijdpoifkfbnl
+  pic:         retwit
+
+- title:       Leanback
+  short_title: Leanback TV
+  description: Chrome app design
+  url:         http://www.thinqtek.com/leanback
+  pic:         leanback
+
+- title:       The RIght Minecraft Forums
+  short_title: The Right Minecraft
+  description: Web forum design + development
+  url:         http://www.therightminecraft.com/
+  pic:         mc
