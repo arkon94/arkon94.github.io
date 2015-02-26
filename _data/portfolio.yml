@@ -52,13 +52,7 @@
   url:         https://chrome.google.com/webstore/detail/retwit-for-twitter/bkpjdbhepoejcinkccodijdpoifkfbnl
   pic:         retwit
 
-- title:       Leanback
-  short_title: Leanback TV
-  description: Chrome app design
-  url:         http://www.thinqtek.com/leanback
-  pic:         leanback
-
-- title:       The RIght Minecraft Forums
+- title:       The Right Minecraft Forums
   short_title: The Right Minecraft
   description: Web forum design + development
   url:         http://www.therightminecraft.com/
