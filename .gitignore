@@ -10,7 +10,7 @@ Thumbs.db
 
 # Jekyll stuff
 _site
-.sass_cache/
+.sass-cache/
 
 # Bundler
 /.bundle/
