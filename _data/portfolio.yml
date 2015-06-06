@@ -1,3 +1,9 @@
+- title:       MyLiveNotes by Crescendum
+  short_title: MyLiveNotes
+  description: Web app design + development
+  url:         http://mylivenotes.com/
+  pic:         mylivenotes
+
 - title:       Colour New Tab
   short_title: ColourNTP
   description: Chrome extension design + development
