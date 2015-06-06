@@ -1,3 +1,15 @@
+- title:       Colour New Tab
+  short_title: ColourNTP
+  description: Chrome extension design + development
+  url:         https://chrome.google.com/webstore/detail/colour-new-tab/hniakoleggfkjjoncnnhinhdbgffkdmd
+  pic:         colourntp
+
+- title:       Vote for Adam
+  short_title: Vote for Adam
+  description: Website design + development
+  url:         http://echeung.me/voteforadam/
+  pic:         voteforadam
+
 - title:       Sherlocke
   short_title: Sherlocke
   description: Design + development
