@@ -17,8 +17,8 @@ body {
 }
 
 html {
-    background-color: #eee;
-    font: 14px/1.5 'Roboto', 'Helvetica', 'Tahoma', 'Arial', sans-serif;
+    background-color: $grey;
+    font: 300 14px/1.5 'Raleway', 'Helvetica', 'Tahoma', 'Arial', sans-serif;
 }
 
 body {
@@ -26,27 +26,53 @@ body {
     flex-flow: column nowrap;
 }
 
+::selection {
+    background-color: rgba($blue, 0.5);
+    color: $white;
+}
+
 a {
-    border-bottom: 1px dotted #fff;
+    border-bottom: 1px dotted $white;
     text-decoration: none;
 }
 
 .container {
     margin: 0 auto;
     max-width: 1000px;
+    padding: 2em;
     width: 100%;
+}
+
+
+// Buttons
+
+.btn-pill {
+    border: 1px solid $white;
+    border-radius: 50em;
+    color: $white;
+    display: inline-block;
+    padding: 1em 2em;
+    transition: background-color 0.3s, box-shadow 0.5s, color 0.3s;
+
+    &:hover {
+        background-color: $white;
+        box-shadow: 0 3px 8px rgba($black, 0.5);
+        color: $blue;
+    }
 }
 
 
 // Header
 
 .header {
-    color: #fff;
+    color: $white;
     display: table;
     flex-shrink: 0;
+    font-family: 'Roboto Condensed', 'Impact', sans-serif;
     height: 100%;
     max-height: 500px;
     position: relative;
+    text-transform: uppercase;
     width: 100%;
 
     &::before,
@@ -61,14 +87,15 @@ a {
     }
 
     &::before {
-        background: #377ecd url('/images/hero.jpg') no-repeat center center / cover;
+        background: $blue url('/images/hero.jpg') no-repeat center center / cover;
         max-height: 500px;
         position: fixed;
         will-change: transform;
     }
 
     &::after {
-        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.25));
+        background: linear-gradient(135deg, transparent 0%, $green 75%);
+        opacity: 0.35;
         position: absolute;
     }
 }
@@ -90,7 +117,6 @@ a {
 }
 
     .header__card--left {
-        // border-right: 1px solid #fff;
         text-align: right;
 
         .header__card__content {
@@ -99,7 +125,6 @@ a {
     }
 
     .header__card--right {
-        // border-left: 1px solid #fff;
 
         .header__card__content {
             animation: anim-slide-right 0.75s ease-out 0.5s forwards;
@@ -109,30 +134,68 @@ a {
 .header__card__content {
     display: inline-block;
     opacity: 0;
-    padding: 2em;
+    padding: 2.25em 3em;
 }
 
 .header__card__name {
-    background-color: rgba(0, 0, 0, 0.15);
-    border: 2px solid #fff;
+    background-color: rgba($black, 0.15);
+    border: 2px solid $white;
     margin-right: 2em;
+    text-align: center
 }
 
     .header__card__name--title {
-        text-transform: uppercase;
+        font-size: 2.5em;
+        letter-spacing: 1px;
     }
 
 .header__card__links {
     a {
         border: 0;
-        color: #fff;
+        color: $white;
         display: block;
+        font-family: 1.1em;
         padding: 0.5em 2em;
         transition: padding 0.2s;
 
         &:hover {
-            padding-left: 3em;
+            padding-left: 2.5em;
         }
+    }
+}
+
+.header__bgtext {
+    bottom: 0;
+    color: rgba($grey, 0.3);
+    font-size: 8em;
+    left: 0;
+    line-height: 0.5;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+}
+
+.header__more {
+    animation: anim-slide-down 0.3s ease-out 1s forwards;
+    background-color: $grey;
+    border: 0;
+    border-radius: 50%;
+    bottom: -1em;
+    color: $blue;
+    display: inline-block;
+    height: 2em;
+    left: 50%;
+    line-height: 1.75em;
+    margin-left: -1em;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    transition: box-shadow 0.5s;
+    width: 2em;
+
+    &:hover {
+        box-shadow: 0 1px 3px rgba($black, 0.5);
     }
 }
 
@@ -140,18 +203,62 @@ a {
 // Main content
 
 .content {
-    background-color: #eee;
+    background-color: $grey;
     flex: 1 0 auto;
-    padding: 2em 1em;
+
+    h1,
+    h2 {
+        font-weight: 300;
+        text-align: center;
+    }
+
+    h1 {
+        background: -webkit-linear-gradient($black, #999);
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $black;
+        font-size: 3em;
+    }
 }
 
 
 // Footer
 
 .footer {
-    background-color: #21484c;
-    color: #fff;
+    background-color: darken($blue, 10%);
+    color: $white;
     flex-shrink: 1;
-    padding: 2em 1em;
     text-align: center;
+}
+
+.footer__fin {
+    color: lighten($blue, 25%);
+    font-size: 0.9em;
+    margin-top: 2em;
+}
+
+
+// Portfolio overview
+
+.portfolio {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+.portfolio__item {
+    height: 300px;
+    float: left;
+    width: (100% / 3);
+
+    &:nth-child(odd) {
+        background-color: $green;
+    }
+
+    &:nth-child(even) {
+        background-color: $blue;
+    }
 }
