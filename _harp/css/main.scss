@@ -121,19 +121,12 @@ a {
 
         .header__card__content {
             animation: anim-slide-left 0.75s ease-out forwards;
-        }
-    }
-
-    .header__card--right {
-
-        .header__card__content {
-            animation: anim-slide-right 0.75s ease-out 0.5s forwards;
+            opacity: 0;
         }
     }
 
 .header__card__content {
     display: inline-block;
-    opacity: 0;
     padding: 2.25em 3em;
 }
 
@@ -141,7 +134,12 @@ a {
     background-color: rgba($black, 0.15);
     border: 2px solid $white;
     margin-right: 2em;
-    text-align: center
+    text-align: center;
+
+    @media (max-width: 750px) {
+        margin-right: 0;
+        margin-top: 20%;
+    }
 }
 
     .header__card__name--title {
@@ -151,10 +149,12 @@ a {
 
 .header__card__links {
     a {
+        animation: anim-slide-right 0.6s ease-out forwards;
         border: 0;
         color: $white;
         display: block;
         font-family: 1.1em;
+        opacity: 0;
         padding: 0.5em 2em;
         transition: padding 0.2s;
 
@@ -162,18 +162,34 @@ a {
             padding-left: 2.5em;
         }
     }
+
+    @for $i from 1 through 4 {
+        a:nth-child(#{$i}) {
+            animation-delay: unquote('#{0.4 + $i * 0.05}s');
+        }
+    }
 }
 
 .header__bgtext {
-    bottom: 0;
+    bottom: -1.75rem;
     color: rgba($grey, 0.3);
     font-size: 8em;
     left: 0;
-    line-height: 0.5;
+    line-height: 1;
     position: absolute;
     text-align: center;
     width: 100%;
     z-index: -1;
+
+    @media (max-width: 1200px) {
+        bottom: -1.5rem;
+        font-size: 6em;
+    }
+
+    @media (max-width: 850px) {
+        bottom: -1rem;
+        font-size: 4em;
+    }
 }
 
 .header__more {
@@ -239,20 +255,56 @@ a {
 }
 
 
-// Portfolio overview
+// Home page sections
 
-.portfolio {
-    &::after {
-        clear: both;
-        content: '';
-        display: table;
+.home-content__about {
+    p {
+        font-size: 1.4em;
+        line-height: 1.75;
+        margin-top: 1em;
+        text-align: left;
     }
 }
 
+.home-content__gallery {
+    margin-top: 3em;
+    position: relative;
+    text-align: center;
+
+    &::before {
+        background-color: $blue;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        top: 1.5em;
+        width: 100%;
+    }
+
+    h2 {
+        background-color: $grey;
+        display: inline-block;
+        font-size: 2em;
+        margin: 0 auto;
+        padding: 0 1em;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+
+// Portfolio overview
+
+.portfolio {
+    font-size: 0;
+}
+
 .portfolio__item {
+    display: inline-block;
+    font-size: 1rem;
     height: 300px;
-    float: left;
-    width: (100% / 3);
+    margin: (10% / 6);
+    width: 30%;
 
     &:nth-child(odd) {
         background-color: $green;
