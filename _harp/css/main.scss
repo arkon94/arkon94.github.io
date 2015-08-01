@@ -119,6 +119,10 @@ a {
     .header__card--left {
         text-align: right;
 
+        @media (max-width: 750px) {
+            text-align: center;
+        }
+
         .header__card__content {
             animation: anim-slide-left 0.75s ease-out forwards;
             opacity: 0;
@@ -246,13 +250,30 @@ a {
     color: $white;
     flex-shrink: 1;
     text-align: center;
+
+    .container {
+        padding-bottom: 1em;
+        padding-top: 3em;
+    }
 }
 
-.footer__fin {
-    color: lighten($blue, 25%);
-    font-size: 0.9em;
-    margin-top: 2em;
-}
+    .footer__social {
+        margin-top: 1em;
+
+        a {
+            border: 0;
+            color: lighten($blue, 25%);
+            display: inline-block;
+            font-family: 'Roboto Condensed', 'Impact', sans-serif;
+            padding: 2em 1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
 
 
 // Home page sections
@@ -302,12 +323,13 @@ a {
 .portfolio__item {
     display: inline-block;
     font-size: 1rem;
-    margin: (10% / 6);
-    width: 30%;
+    margin: 1em 0;
+    vertical-align: top;
+    width: (100% / 3);
 }
 
     .portfolio__item--image {
-        background-color: $green;
+        background: linear-gradient(235deg, $blue, $green);
         height: 250px;
         width: 100%;
     }
