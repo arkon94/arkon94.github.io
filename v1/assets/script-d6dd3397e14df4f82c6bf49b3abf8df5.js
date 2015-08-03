@@ -1,0 +1,1 @@
+var scrollTo=function(o,c){$("html, body").animate({scrollTop:$(o).offset().top-c},650)};$("#header__more").click(function(){scrollTo("#about",0)}),$("#footer__top").click(function(){scrollTo("body",0)});
