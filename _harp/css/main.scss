@@ -18,7 +18,8 @@ body {
 
 html {
     background-color: $grey;
-    font: 300 14px/1.5 'Raleway', 'Helvetica', 'Tahoma', 'Arial', sans-serif;
+    color: $black;
+    font: 300 14px/1.75 'Inconsolata', 'Consolas', monospace;
 }
 
 body {
@@ -34,6 +35,15 @@ body {
 a {
     border-bottom: 1px dotted $white;
     text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Dosis', 'Impact', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .container {
@@ -52,6 +62,7 @@ a {
     color: $white;
     display: inline-block;
     padding: 1em 2em;
+    text-transform: uppercase;
     transition: background-color 0.3s, box-shadow 0.5s, color 0.3s;
 
     &:hover {
@@ -68,7 +79,7 @@ a {
     color: $white;
     display: table;
     flex-shrink: 0;
-    font-family: 'Roboto Condensed', 'Impact', sans-serif;
+    font-family: 'Dosis', 'Impact', sans-serif;
     height: 100%;
     max-height: 500px;
     position: relative;
@@ -148,7 +159,7 @@ a {
 
     .header__card__name--title {
         font-size: 2.5em;
-        letter-spacing: 1px;
+        letter-spacing: 0.1em;
     }
 
 .header__card__links {
@@ -157,7 +168,8 @@ a {
         border: 0;
         color: $white;
         display: block;
-        font-family: 1.1em;
+        font-size: 1.15em;
+        letter-spacing: 0.1em;
         opacity: 0;
         padding: 0.5em 2em;
         transition: padding 0.2s;
@@ -175,9 +187,9 @@ a {
 }
 
 .header__bgtext {
-    bottom: -1.75rem;
+    bottom: -1.1rem;
     color: rgba($grey, 0.3);
-    font-size: 8em;
+    font-size: 7.5em;
     left: 0;
     line-height: 1;
     position: absolute;
@@ -186,13 +198,13 @@ a {
     z-index: -1;
 
     @media (max-width: 1200px) {
-        bottom: -1.5rem;
-        font-size: 6em;
+        bottom: -0.75rem;
+        font-size: 5.5em;
     }
 
     @media (max-width: 850px) {
-        bottom: -1rem;
-        font-size: 4em;
+        bottom: -0.5rem;
+        font-size: 3.5em;
     }
 }
 
@@ -233,7 +245,7 @@ a {
     }
 
     h1 {
-        background: -webkit-linear-gradient($black, #999);
+        background: -webkit-linear-gradient($black, lighten($black, 35%));
         background-size: cover;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -248,6 +260,7 @@ a {
 .footer {
     background-color: darken($blue, 10%);
     color: $white;
+    font-family: 'Dosis', 'Impact', sans-serif;
     flex-shrink: 1;
     text-align: center;
 
@@ -258,18 +271,20 @@ a {
 }
 
     .footer__social {
-        margin-top: 1em;
+        margin: 1.5em auto;
 
         a {
             border: 0;
+            border-radius: $radius;
             color: lighten($blue, 25%);
             display: inline-block;
-            font-family: 'Roboto Condensed', 'Impact', sans-serif;
-            padding: 2em 1em;
+            font-weight: 300;
+            padding: 0.5em 1em;
             text-transform: uppercase;
-            transition: color 0.3s;
+            transition: box-shadow 0.3s, color 0.3s;
 
             &:hover {
+                box-shadow: 0 3px 8px rgba($black, 0.5);
                 color: $white;
             }
         }
@@ -280,15 +295,15 @@ a {
 
 .home-content__about {
     p {
-        font-size: 1.4em;
-        line-height: 1.75;
+        font-size: 1.25em;
+        line-height: 2;
         margin-top: 1em;
         text-align: left;
     }
 }
 
 .home-content__gallery {
-    margin-top: 3em;
+    margin-top: 4em;
     position: relative;
     text-align: center;
 
@@ -298,7 +313,7 @@ a {
         height: 1px;
         left: 0;
         position: absolute;
-        top: 1.5em;
+        top: 1em;
         width: 100%;
     }
 
@@ -306,7 +321,8 @@ a {
         background-color: $grey;
         display: inline-block;
         font-size: 2em;
-        margin: 0 auto;
+        line-height: 1;
+        margin: 0 auto 1em;
         padding: 0 1em;
         position: relative;
         z-index: 10;
