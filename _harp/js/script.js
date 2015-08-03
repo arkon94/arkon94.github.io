@@ -16,7 +16,8 @@ for (var i = 0; i < links.length; i++) {
         e.preventDefault();
 
         var link = this.getAttribute('href').substr(1);
-
-        scrollTo(document.body, document.getElementById(link).offsetTop, 350);
+        if (link !== '') {
+            scrollTo(document.body, document.getElementById(link).offsetTop, 350);
+        }
     }, false);
 }
