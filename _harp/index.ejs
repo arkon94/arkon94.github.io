@@ -33,7 +33,7 @@
 
                     <div class="portfolio__item">
                         <div class="portfolio__item--image">
-                            <%= item.image %>
+                            <img src="/images/portfolio/<%= item.image %>.jpg" alt="<%= item.title %>">
                         </div>
 
                         <div class="portfolio__item--description">
@@ -45,6 +45,8 @@
                                 <% } %>
                             </div>
                             <p><%= item.description %></p>
+
+                            <a class="portfolio__item--link" href="<%= item.url %>">See it live</a>
                         </div>
                     </div>
                 <% } %>

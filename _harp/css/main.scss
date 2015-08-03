@@ -333,21 +333,27 @@ h3 {
     .portfolio__item--image,
     .portfolio__item--description {
         display: table-cell;
-        vertical-align: top;
     }
 
     .portfolio__item--image {
-        background: linear-gradient(235deg, $blue, $green);
-        height: 250px;
-        width: 350px;
+        // background: linear-gradient(235deg, $blue, $green);
+        vertical-align: middle;
+        width: 250px;
+
+        img {
+            height: 187px;
+            width: 250px;
+        }
     }
 
     .portfolio__item--description {
         padding-left: 1em;
+        vertical-align: top;
     }
 
         .portfolio__item--title {
             font-size: 1.75em;
+            text-transform: none;
         }
 
         .portfolio__item--tags {
@@ -359,5 +365,19 @@ h3 {
                 background-color: $grey;
                 border-radius: $radius;
                 padding: 0.25em 0.5em;
+            }
+        }
+
+        .portfolio__item--link {
+            border-radius: $radius;
+            color: $blue;
+            display: inline-block;
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            text-transform: uppercase;
+            transition: box-shadow 0.3s, color 0.3s;
+
+            &:hover {
+                box-shadow: 0 3px 8px rgba($black, 0.5);
             }
         }
