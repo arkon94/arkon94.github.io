@@ -318,6 +318,7 @@ h3 {
     background-color: rgba($white, 0.75);
     border: 1px solid lighten($blue, 30%);
     border-radius: $radius;
+    display: table;
     margin: 2em 0;
     padding: 1em;
     transition: border 0.3s, box-shadow 0.5s;
@@ -329,18 +330,20 @@ h3 {
     }
 }
 
+    .portfolio__item--image,
+    .portfolio__item--description {
+        display: table-cell;
+        vertical-align: top;
+    }
+
     .portfolio__item--image {
         background: linear-gradient(235deg, $blue, $green);
-        display: inline-block;
         height: 250px;
-        vertical-align: top;
         width: 350px;
     }
 
     .portfolio__item--description {
-        display: inline-block;
-        margin-left: 1em;
-        vertical-align: top;
+        padding-left: 1em;
     }
 
         .portfolio__item--title {
@@ -348,7 +351,9 @@ h3 {
         }
 
         .portfolio__item--tags {
+            border-bottom: 1px dashed $black;
             margin-bottom: 1em;
+            padding-bottom: 1em;
 
             span {
                 background-color: $grey;
