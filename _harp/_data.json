@@ -1,0 +1,18 @@
+{
+    "portfolio": {
+        "items": [
+            {
+                "title": "Item 1",
+                "image": "",
+                "categories": ["HTML", "CSS"],
+                "description": "Test description"
+            },
+            {
+                "title": "Item 2",
+                "image": "",
+                "categories": ["HTML"],
+                "description": "Another description"
+            }
+        ]
+    }
+}

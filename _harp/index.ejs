@@ -28,77 +28,26 @@
             <h2>Work</h2>
 
             <div class="portfolio">
-                <div class="portfolio__item">
-                    <div class="portfolio__item--image"></div>
-                    <div class="portfolio__item--description">
-                        <h3 class="portfolio__item--title">Title</h3>
-                        <div class="portfolio__item--tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <p>Description</p>
-                    </div>
-                </div>
+                <% for (var i in public._data.portfolio.items) { %>
+                    <% var item = public._data.portfolio.items[i] %>
 
-                <div class="portfolio__item">
-                    <div class="portfolio__item--image"></div>
-                    <div class="portfolio__item--description">
-                        <h3 class="portfolio__item--title">Title</h3>
-                        <div class="portfolio__item--tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
+                    <div class="portfolio__item">
+                        <div class="portfolio__item--image">
+                            <%= item.image %>
                         </div>
-                        <p>Description</p>
-                    </div>
-                </div>
 
-                <div class="portfolio__item">
-                    <div class="portfolio__item--image"></div>
-                    <div class="portfolio__item--description">
-                        <h3 class="portfolio__item--title">Title</h3>
-                        <div class="portfolio__item--tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
+                        <div class="portfolio__item--description">
+                            <h3 class="portfolio__item--title"><%= item.title %></h3>
+                            <div class="portfolio__item--tags">
+                                <% for (var j in item.categories) { %>
+                                    <% var category = item.categories[j] %>
+                                    <span><%= category %></span>
+                                <% } %>
+                            </div>
+                            <p><%= item.description %></p>
                         </div>
-                        <p>Description</p>
                     </div>
-                </div>
-
-                <div class="portfolio__item">
-                    <div class="portfolio__item--image"></div>
-                    <div class="portfolio__item--description">
-                        <h3 class="portfolio__item--title">Title</h3>
-                        <div class="portfolio__item--tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <p>Description</p>
-                    </div>
-                </div>
-
-                <div class="portfolio__item">
-                    <div class="portfolio__item--image"></div>
-                    <div class="portfolio__item--description">
-                        <h3 class="portfolio__item--title">Title</h3>
-                        <div class="portfolio__item--tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <p>Description</p>
-                    </div>
-                </div>
-
-                <div class="portfolio__item">
-                    <div class="portfolio__item--image"></div>
-                    <div class="portfolio__item--description">
-                        <h3 class="portfolio__item--title">Title</h3>
-                        <div class="portfolio__item--tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-                        <p>Description</p>
-                    </div>
-                </div>
+                <% } %>
             </div>
         </section>
     </div>
