@@ -296,9 +296,9 @@ h3 {
 
         &::before,
         &::after {
-            background-color: $blue;
+            border-top: 1px dashed $blue;
             content: '';
-            height: 1px;
+            height: 0;
             position: absolute;
             top: 0.5em;
             width: 35%;
