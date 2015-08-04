@@ -258,11 +258,12 @@ h3 {
             font-weight: 300;
             padding: 0.5em 1em;
             text-transform: uppercase;
-            transition: box-shadow 0.3s, color 0.3s;
+            transition: background-color 0.3s, box-shadow 0.5s, color 0.3s;
 
             &:hover {
+                background-color: $white;
                 box-shadow: 0 3px 8px rgba($black, 0.5);
-                color: $white;
+                color: $blue;
             }
         }
     }
@@ -280,35 +281,36 @@ h3 {
 }
 
 .home-content__gallery {
-    margin-top: 1em;
-    padding-top: 3em;
+    margin-top: 2em;
+    padding-top: 2em;
     position: relative;
     text-align: center;
 
-    &::before {
-        background-color: $blue;
-        content: '';
-        height: 1px;
-        left: 20%;
-        position: absolute;
-        top: 4em;
-        width: 60%;
-
-        @media (max-width: 750px) {
-            left: 0;
-            width: 100%;
-        }
-    }
-
     h2 {
-        background-color: $grey;
         display: inline-block;
         font-size: 2em;
         line-height: 1;
         margin: 0 auto;
-        padding: 0 1em;
         position: relative;
-        z-index: 10;
+        width: 100%;
+
+        &::before,
+        &::after {
+            background-color: $blue;
+            content: '';
+            height: 1px;
+            position: absolute;
+            top: 0.5em;
+            width: 35%;
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
     }
 }
 
