@@ -181,7 +181,7 @@ h3 {
 
     @for $i from 1 through 4 {
         a:nth-child(#{$i}) {
-            animation-delay: unquote('#{0.4 + $i * 0.05}s');
+            animation-delay: #{0.4 + $i * 0.05}s;
         }
     }
 }
