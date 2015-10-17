@@ -2,65 +2,56 @@
     "portfolio": {
         "items": [
             {
-                "title": "Computer Science Student Union",
+                "title": "UofT Computer Science Student Union",
                 "image": "cssu",
-                "categories": ["Rebranding", "Jekyll"],
-                "description": "As the Senior Graphic Designer for the University of Toronto Computer Science Student Union, a complete rebranding of the union's website and materials was issued.",
+                "description": "Complete rebranding of the website and materials as the Senior Graphic Designer.",
                 "url": "https://cssu.ca/"
             },
             {
                 "title": "CDF Labs",
                 "image": "cdf",
-                "categories": ["Android development"],
-                "description": "A simple Android app that scrapes and presents data regarding the availability of lab computers and printers at UofT.",
+                "description": "Android app showing data about lab computer availability and printer queues at UofT.",
                 "url": "https://play.google.com/store/apps/details?id=me.echeung.cdflabs"
             },
             {
                 "title": "Colour New Tab",
                 "image": "colourntp",
-                "categories": ["Chrome extension"],
                 "description": "A simple, yet customizable, new tab page replacement.",
                 "url": "https://chrome.google.com/webstore/detail/colour-new-tab/hniakoleggfkjjoncnnhinhdbgffkdmd"
             },
             {
                 "title": "MyLiveNotes by Crescendum",
                 "image": "mylivenotes",
-                "categories": ["Branding", "React.js"],
                 "description": "A web app designed for academic reading.",
                 "url": "http://mylivenotes.com/"
             },
             {
                 "title": "Jon & Nick",
                 "image": "jonnick",
-                "categories": ["Web design"],
-                "description": "A single page responsive website designed for an election campaign.",
+                "description": "A website designed for an election campaign.",
                 "url": "http://echeung.me/jonandnick/"
             },
             {
                 "title": "Sherlocke",
                 "image": "sherlocke",
-                "categories": ["Web design", "Jekyll", "Angular"],
-                "description": "A web app that utilized IBM Watson to present relevant legal documents while browsing CanLII.",
+                "description": "A web app using IBM Watson that presents relevant legal documents while browsing CanLII.",
                 "url": "http://sherlocke.github.io/"
             },
             {
                 "title": "The MarkUs Project",
                 "image": "markus",
-                "categories": ["Rebranding", "Ruby on Rails"],
                 "description": "An overhaul of the web app's visual design.",
                 "url": "http://markusproject.org/"
             },
             {
                 "title": "Ultraviolet",
                 "image": "uv",
-                "categories": ["Chrome app"],
                 "description": "A simple steganography Chrome app created during PennApps Spring 2014.",
                 "url": "http://ultraviolet.unhaltable.com/"
             },
             {
                 "title": "Cryptr",
                 "image": "cryptr",
-                "categories": ["Chrome extension"],
                 "description": "An intuitive encryption Chrome extension. Winner of UofTHacks 2013.",
                 "url": "http://cryptr.unhaltable.com/"
             }

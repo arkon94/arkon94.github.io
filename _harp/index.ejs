@@ -32,22 +32,12 @@
                     <% var item = public._data.portfolio.items[i] %>
 
                     <div class="portfolio__item">
-                        <div class="portfolio__item--image">
-                            <img src="/images/portfolio/<%= item.image %>.jpg" alt="<%= item.title %>">
-                        </div>
+                        <img class="portfolio__item--image" src="/images/portfolio/<%= item.image %>.jpg" alt="<%= item.title %>">
 
-                        <div class="portfolio__item--description">
+                        <a class="portfolio__item--description" href="<%= item.url %>">
                             <h3 class="portfolio__item--title"><%= item.title %></h3>
-                            <div class="portfolio__item--tags">
-                                <% for (var j in item.categories) { %>
-                                    <% var category = item.categories[j] %>
-                                    <span><%= category %></span>
-                                <% } %>
-                            </div>
                             <p><%= item.description %></p>
-
-                            <a class="portfolio__item--link" href="<%= item.url %>">See it live</a>
-                        </div>
+                        </a>
                     </div>
                 <% } %>
             </div>
