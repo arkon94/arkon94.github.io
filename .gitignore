@@ -9,4 +9,8 @@ ehthumbs.db
 Thumbs.db
 
 # Node
+node_modules/
 npm-debug.log
+
+# Compiled site
+_harp/www/
