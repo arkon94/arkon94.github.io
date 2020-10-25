@@ -13,7 +13,7 @@
     "deploy": "harp compile _harp && gh-pages -d _harp/www/ -b master"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0",
-    "harp": "^0.24.0"
+    "gh-pages": "^3.1.0",
+    "harp": "^0.32.0"
   }
 }
