@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "start": "harp server _harp",
-    "deploy": "harp compile _harp && gh-pages -d _harp/www/ -b master"
+    "build": "harp compile _harp",
+    "deploy": "npm run build && gh-pages -d _harp/www/ -b master"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
